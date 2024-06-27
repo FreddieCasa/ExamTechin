@@ -1,12 +1,12 @@
-package lt.techin.addvertappbackend.service;
+package lt.techin.backend.service;
 
-import lt.techin.addvertappbackend.model.AdvertCategory;
-import lt.techin.addvertappbackend.repository.AdvertCategoryRepository;
+import lt.techin.backend.model.AdvertCategory;
+import lt.techin.backend.repository.AdvertCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class AdvertCategoryService {

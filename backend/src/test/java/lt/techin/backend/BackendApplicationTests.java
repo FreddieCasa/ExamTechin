@@ -1,10 +1,10 @@
-package lt.techin.addvertappbackend;
+package lt.techin.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AddvertappbackendApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {

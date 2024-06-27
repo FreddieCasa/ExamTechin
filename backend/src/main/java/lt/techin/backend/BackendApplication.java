@@ -1,13 +1,13 @@
-package lt.techin.addvertappbackend;
+package lt.techin.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AddvertappbackendApplication {
+public class BackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AddvertappbackendApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 }

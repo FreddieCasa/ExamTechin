@@ -1,7 +1,7 @@
-package lt.techin.addvertappbackend.controller;
+package lt.techin.backend.controller;
 
-import lt.techin.addvertappbackend.model.AdvertCategory;
-import lt.techin.addvertappbackend.service.AdvertCategoryService;
+import lt.techin.backend.model.AdvertCategory;
+import lt.techin.backend.service.AdvertCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
