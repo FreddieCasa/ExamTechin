@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
  
 import java.util.List;
+import java.util.Optional;
  
 @Service
 public class AdvertService {
@@ -28,7 +29,17 @@ return advertRepository.save(advert);
         advertRepository.deleteById(id);
     }
  
-    public List<Advert> getAdvertsByCategoryId(Long categoryId) {
-        return advertRepository.findByCategoryId(categoryId);
-    }
+    // public List<Advert> getAdvertsByCategoryId(Long categoryId) {
+    //     return advertRepository.findByCategoryId(categoryId);
+    // }
+
+    public void updateAdvertById(Long id, Advert newAdvertData) {
+        Optional<Advert> oldAdvertData = advertRepository.findById(id);
+        Advert updatedAdvertData = oldAdvertData.get();
+        updatedAdvertData.setTitle(newAdvertData.getTitle());
+
+        updatedAdvertData.setDescription(newAdvertData.getDescription());
+  
+        advertRepository.save(updatedAdvertData);
+      }
 }

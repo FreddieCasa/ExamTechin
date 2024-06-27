@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
  
 public interface AdvertRepository extends JpaRepository<Advert, Long> {
-    List<Advert> findByCategoryId(Long categoryId);
+    List<Advert> findByTitle(String title);
 }

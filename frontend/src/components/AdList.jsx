@@ -3,14 +3,14 @@ import axios from 'axios';
 
 const AdList = () => {
     const [ads,setAds] = useState([]);
-    const [editingAds, seteditingAds] = useState(null);
+    const [editingAds, setEditingAds] = useState(null);
 
     useEffect(() => {
         fetchAds();
     }, []);
 
     const fetchAds = () => {
-        axios.get('http://localhost:8080/api/ads')
+        axios.get('http://localhost:8080/adverts')
             .then(response => {
             setAds(response.data);
             })
@@ -20,7 +20,7 @@ const AdList = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:8080/api/ads/remove/${id}`)
+        axios.delete(`http://localhost:8080/adverts/remove/${id}`)
             .then(response => {
                 fetchAds();
             })
@@ -35,7 +35,7 @@ const AdList = () => {
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:8080/api/ads/update/${editingAds.id}`, editingAds)
+        axios.post(`http://localhost:8080/adverts/update/${editingAds.id}`, editingAds)
             .then(response => {
                 fetchAds();
                 setEditingAds(null);
@@ -59,7 +59,7 @@ const AdList = () => {
             <ul>
                 {ads.map(ad => (
                     <li key={ad.id}>
-                        {ad.title} by {ad.author}
+                        {ad.title} - {ad.description}
                         <button onClick={() => handleDelete(ad.id)}>Delete</button>
                         <button onClick={() => handleEdit(ad)}>Update</button>
                     </li>
@@ -70,14 +70,6 @@ const AdList = () => {
                     <div>
                         <label>Title</label>
                         <input type="text" name="title" value={editingAds.title} onChange={handleChange} required />
-                    </div>
-                    <div>
-                        <label>Author</label>
-                        <input type="text" name="author" value={editingAds.author} onChange={handleChange} required />
-                    </div>
-                    <div>
-                        <label>Genre</label>
-                        <input type="text" name="genre" value={editingAds.genre} onChange={handleChange} required />
                     </div>
                     <div>
                         <label>Description</label>

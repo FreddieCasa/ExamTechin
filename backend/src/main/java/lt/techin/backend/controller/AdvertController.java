@@ -34,8 +34,13 @@ public class AdvertController {
         advertService.removeAdvertById(id);
     }
  
-    @GetMapping("/category/{categoryId}")
-    public List<Advert> getAdvertsByCategoryId(@PathVariable Long categoryId) {
-        return advertService.getAdvertsByCategoryId(categoryId);
+    // @GetMapping("/category/{categoryId}")
+    // public List<Advert> getAdvertsByCategoryId(@PathVariable Long categoryId) {
+    //     return advertService.getAdvertsByCategoryId(categoryId);
+    // }
+
+    @PostMapping("/update/{id}")
+    public void  updateAdvertById(@PathVariable Long id, @RequestBody Advert newAdvertData) {
+         advertService.updateAdvertById(id,newAdvertData);
     }
 }

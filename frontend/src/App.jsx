@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import AdCategory from './components/AdCategory'
+import AddAd from './components/AddAd'
 import AdList from './components/AdList'
 
 function App() {
 
   return (
     <>
-    <AdCategory/>
+    <AddAd/>
     <AdList />
     </>
   )

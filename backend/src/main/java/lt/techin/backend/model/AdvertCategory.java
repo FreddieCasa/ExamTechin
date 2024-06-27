@@ -17,10 +17,9 @@ public class AdvertCategory {
     private Long id;
     private String title;
  
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Advert> adverts;
+    // @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    // private List<Advert> adverts;
  
-    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -37,11 +36,11 @@ this.id = id;
         this.title = title;
     }
  
-    public List<Advert> getAdverts() {
-        return adverts;
-    }
+    // public List<Advert> getAdverts() {
+    //     return adverts;
+    // }
  
-    public void setAdverts(List<Advert> adverts) {
-        this.adverts = adverts;
-    }
+    // public void setAdverts(List<Advert> adverts) {
+    //     this.adverts = adverts;
+    // }
 }

@@ -15,9 +15,9 @@ public class Advert {
     private String title;
     private String description;
  
-    @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
-    private AdvertCategory category;
+    // @ManyToOne
+    // @JoinColumn(name = "category_id", nullable = false)
+    // private AdvertCategory category;
  
     // Getters and setters
     public Long getId() {
@@ -44,11 +44,11 @@ this.id = id;
         this.description = description;
     }
  
-    public AdvertCategory getCategory() {
-        return category;
-    }
+    // public AdvertCategory getCategory() {
+    //     return category;
+    // }
  
-    public void setCategory(AdvertCategory category) {
-        this.category = category;
-    }
+    // public void setCategory(AdvertCategory category) {
+    //     this.category = category;
+    // }
 }
