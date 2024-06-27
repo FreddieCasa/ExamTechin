@@ -73,7 +73,7 @@ const AdList = () => {
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea name="description" value={editingAds.description} onChange={handleChange} required />
+                        <input type="text" name="description" value={editingAds.description} onChange={handleChange} required />
                     </div>
                     <button type="submit">Update ad</button>
                     <button onClick={() => setEditingAds(null)}>Cancel</button>
