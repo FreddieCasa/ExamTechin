@@ -12,7 +12,7 @@ import java.util.Optional;
 public class AdvertCategoryService {
     @Autowired 
     private AdvertCategoryRepository advertCategoryRepository;
-
+    
     public List<AdvertCategory> getAllCategories() {
         return advertCategoryRepository.findAll();
     }
